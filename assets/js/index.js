@@ -31,3 +31,13 @@ for (let i = 3; i < planItems.length; i += 3) {
     });
   });
 }
+/* accordeon */
+document.querySelectorAll('.accordion-title').forEach(title => {
+  title.addEventListener('click', function (element) {
+    const content = this.nextElementSibling;
+    element.target.classList.toggle('active');
+    if (content && content.classList.contains('accordion-content')) {
+      content.classList.toggle('active');
+    }
+  });
+});
