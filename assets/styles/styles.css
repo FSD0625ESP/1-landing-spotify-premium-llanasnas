@@ -13,6 +13,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.d-block {
+  display: block !important;
+}
 .pt-0 {
   padding-top: 0px !important;
 }
@@ -74,7 +77,9 @@ a {
   color: #ffffff;
   text-decoration: underline;
 }
-
+header {
+  width: 100%;
+}
 .container {
   width: 100%;
   max-width: 1170px;
@@ -84,7 +89,6 @@ a {
   background-color: #000000;
 }
 .navbar {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   height: 75px;
@@ -103,7 +107,7 @@ a {
 }
 .menu-container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -152,10 +156,11 @@ nav a {
 }
 
 #banner {
-  width: 100%;
   min-height: 500px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  padding-left: 20px;
   justify-content: flex-start;
   position: relative;
   background: linear-gradient(
@@ -225,7 +230,7 @@ nav a {
 .button.primary {
   background-color: #ffd2d7;
 }
-.button.secundary {
+.button.secondary {
   background-color: #000000;
   box-shadow: #ffffff 0px 0px 2px;
   color: #ffffff;
@@ -357,7 +362,7 @@ section {
 #choose-a-plan {
   margin-top: 5rem;
 }
-#choose-a-plan h3 {
+#choose-a-plan h3.title {
   font-size: 2.1em;
   margin-top: 40px;
   display: flex;
@@ -404,8 +409,7 @@ p.subtitle {
 .includes-list {
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-top: 50px;
+  margin: 50px 0 0 0;
 }
 .includes-list li {
   position: relative;
@@ -425,7 +429,7 @@ p.subtitle {
   padding: 20px;
   flex: 1 1 calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
-  min-width: 250px;
+  min-width: 350px;
   box-sizing: border-box;
 }
 .cards-container {
@@ -443,13 +447,12 @@ p.subtitle {
   flex-direction: column;
 }
 .card-header h3 {
-  display: block !important;
+  display: block;
   font-size: 2em;
   margin: 0;
   text-align: left;
   font-weight: 600;
 }
-
 .top-promo {
   position: absolute;
   top: 0px;
@@ -587,7 +590,10 @@ footer {
   padding: 10px;
   flex-direction: column;
   align-items: start;
-  justify-content: start;
+  justify-content: flex-start;
+}
+.footer-column.media {
+  align-items: end;
 }
 .footer-column-title {
   font-weight: bold;
@@ -613,7 +619,7 @@ footer {
 .footer-link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 0.9em;
   margin-top: 10px;
   text-align: left;
   margin-bottom: 10px;
@@ -640,38 +646,243 @@ footer {
   font-size: 0.8em;
   padding-bottom: 10px;
 }
-/* Móviles: 320px - 575px */
-@media (min-width: 320px) and (max-width: 575px) {
+.links-bottom {
+  max-width: 80%;
+  padding-left: 15px;
+}
+#mobile-nav {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  height: 100%;
+  margin-top: 20px;
+  max-width: 500px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* MENU MOBILE BURGER ANIMATION */
+#nav-icon-mobile {
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  z-index: 100;
+  display: none;
+  height: 45px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon-mobile span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#nav-icon-mobile span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#nav-icon-mobile span:nth-child(2) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#nav-icon-mobile span:nth-child(3) {
+  top: 24px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#nav-icon-mobile.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+#nav-icon-mobile.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+#nav-icon-mobile.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 18px;
+  left: 8px;
+}
+.mobile-menu-container .menu-content .item-nav {
+  padding: 5px;
+  height: auto;
+}
+
+/* END ANIMATION */
+
+@media (max-width: 575px) {
+  /* Estilos para móviles */
   /* Estilos para móviles */
   .nav-menu {
     display: none;
   }
+  #nav-icon-mobile {
+    display: block;
+  }
+  .mobile-menu-container .menu-content .item-nav .nav-link {
+    font-weight: bold !important;
+    font-size: 1.9em;
+  }
+  .mobile-menu-container .menu-content .item-nav.user-nav-items .nav-link {
+    font-weight: 200 !important;
+    font-size: 1.8em;
+  }
   section {
     padding: 15px;
+  }
+  .banner-buttons {
+    display: block;
+    width: 100%;
+  }
+  .navbar {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  .menu-separator {
+    width: 25px;
+    margin-left: 20px;
+    height: 2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .banner-image {
+    left: -160px;
+    top: -50px;
+    right: unset;
+  }
+  .banner-content {
+    padding-top: 60%;
+  }
+  #banner {
+    background: linear-gradient(
+      180deg,
+      rgb(233, 184, 188) 0%,
+      rgba(18, 18, 18, 1) 50%
+    );
+  }
+
+  .card {
+    min-width: 320px;
+  }
+  .card.mt-3 {
+    margin-top: 0px !important;
+  }
+  #banner h1 {
+    font-size: 2.2rem;
+  }
+  .button {
+    padding: 15px 0px;
+    margin-top: 15px;
+  }
+  .banner-buttons .button {
+    width: 100%;
+  }
+  .premium-plans-includes {
+    display: block;
+    padding: 15px;
+  }
+  .footer-grid {
+    display: block;
+  }
+  .footer-column.media {
+    align-items: start;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+    padding-left: 20px;
   }
 }
 
 /* Tablets Android: 576px - 767px */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 900px) {
   /* Estilos para tablets android */
-}
+  .nav-menu {
+    display: none;
+  }
+  #nav-icon-mobile {
+    display: block;
+  }
+  .footer-grid {
+    display: block;
+  }
 
-/* iPad Portrait: 768px - 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Estilos para iPad en vertical */
-}
-
-/* iPad Landscape o monitores pequeños: 1024px - 1279px */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  /* Estilos para iPad en horizontal o monitores pequeños */
-}
-
-/* Pantallas normales: 1280px - 1440px */
-@media (min-width: 1280px) and (max-width: 1440px) {
-  /* Estilos para pantallas normales */
-}
-
-/* Pantallas grandes: > 1440px */
-@media (min-width: 1441px) {
-  /* Estilos para pantallas grandes */
+  .mobile-menu-container .menu-content .item-nav .nav-link {
+    font-weight: bold !important;
+    font-size: 1.9em;
+  }
+  .mobile-menu-container .menu-content .item-nav.user-nav-items .nav-link {
+    font-weight: 200 !important;
+    font-size: 1.8em;
+  }
+  .menu-separator {
+    width: 25px;
+    margin-left: 20px;
+    height: 2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .premium-plans-includes h3 {
+    font-size: 1.5em !important;
+  }
+  .card {
+    min-width: 300px;
+  }
+  .card.mt-3 {
+    margin-top: 0px !important;
+  }
+  .premium-plans-includes {
+    padding: 15px;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .footer-column.media {
+    align-items: start;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
 }
