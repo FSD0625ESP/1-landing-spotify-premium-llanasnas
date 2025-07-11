@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Gerard</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header bg-black">
+      <div class="container m-0-auto">
+        <div class="navbar">
+          <!-- LOGO -->
+          <div class="logo">
+            <img src="assets/icons/logo.svg" alt="Spotify Logo" />
+          </div>
+          <!-- NAVBAR -->
+          <nav class="nav-menu">
+            <div class="menu-container">
+              <div class="left-nav">
+                <div class="item-nav">
+                  <a href="" class="nav-link">Premium</a>
+                </div>
+                <div class="item-nav">
+                  <a href="" class="nav-link">Asistencia</a>
+                </div>
+                <div class="item-nav">
+                  <a href="" class="nav-link">Descargar</a>
+                </div>
+              </div>
+              <div class="menu-separator"></div>
+              <div class="right-nav">
+                <div class="item-nav">
+                  <a href="" class="nav-link">Registrarse</a>
+                </div>
+                <div class="item-nav">
+                  <a href="playlist.html" class="nav-link">Iniciar sesión</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- TODO: nav mobile -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- BANNER -->
+      <section id="banner" class="banner_bg">
+        <div class="banner-image">
+          <img src="assets/images/banner_image.png" alt="" />
+        </div>
+        <div class="container">
+          <div class="banner-content">
+            <h1>
+              Disfruta de tu contenido favorito sin límites. Prueba Premium
+              Individual durante 2 meses por 0 €.
+            </h1>
+            <p>Después, solo 10,99 €/mes. Cancela cuando quieras.</p>
+            <div class="banner-buttons">
+              <button class="button primary">Empezar</button>
+              <a href="#choose-a-plan" class="button secundary">
+                Ver todos los planes
+              </a>
+            </div>
+            <span class="text-mini">
+              Solo con Premium Individual. 0 € por 2 meses. Luego, 10,99 € al
+              mes. Oferta disponible solo si no has probado Premium.
+              <a href="">Consulta las condiciones</a>.<br />
+              La oferta termina el 19 de julio de 2025.
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 1 -->
+      <section id="feel-the-difference">
+        <div class="container">
+          <div class="section-content-sized">
+            <h2 class="text-center">Siente la diferencia</h2>
+            <h4 class="text-center">
+              Pásate a Premium y disfruta del control total de lo que escuchas.
+              Cancela cuando quieras.
+            </h4>
+            <div class="plans-container">
+              <div class="plans-table">
+                <!-- header -->
+                <div class="plan-item plan-item-1 th">
+                  <p>Qué incluye</p>
+                </div>
+                <div class="plan-item plan-item-2 th">
+                  <p>Plan Spotify Free</p>
+                </div>
+                <div class="plan-item plan-item-3 th">
+                  <span class="icon-spotify">
+                    <!-- añado el svg cómo imágen, para tener el código mas limpio  -->
+                    <img
+                      src="assets/icons/spotify-icon.svg"
+                      alt="Spotify Icon"
+                    />
+                  </span>
+                  <p>Planes Premium de Spotify</p>
+                </div>
+                <!-- body -->
+                <!-- row 1 -->
+                <div class="plan-item plan-item-1 row-1">
+                  <p class="tooltip dashed_underline text-basic">
+                    Escucha tu música favorita sin anuncios
+                  </p>
+                  <div class="tooltip_content right">
+                    Disfruta de tu música sin pausas publicitarias.
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-1">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-1">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- row 2 -->
+                <div class="plan-item plan-item-1n row-2">
+                  <p class="tooltip dashed_underline text-basic">
+                    Descarga de canciones para disfrutarlas sin conexión
+                  </p>
+                  <div class="tooltip_content right">
+                    Descarga tus álbumes y listas de reproducción y llévatelos
+                    adonde no llegue Internet. Puedes descargar hasta 10.000
+                    canciones, cada una en un máximo de 5 dispositivos.
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-2">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-2">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- row 3 -->
+                <div class="plan-item plan-item-1 row-3">
+                  <p class="tooltip dashed_underline text-basic">
+                    Escucha canciones en cualquier orden
+                  </p>
+                  <div class="tooltip_content right">
+                    Control total sobre tu escucha: repite canciones, vuelve a
+                    escuchar las partes que más te gustan y reproduce álbumes en
+                    orden.
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-3">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-3">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- row 4 -->
+                <div class="plan-item plan-item-1 row-4">
+                  <p class="tooltip dashed_underline text-basic">
+                    calidad del audio alta
+                  </p>
+                  <div class="tooltip_content right">
+                    Plan Free: audio de calidad básica <br />
+                    (~160 kbp/s) <br />
+                    Plan Premium: audio de calidad alta <br />
+                    (~320 kbp/s)
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-4">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-4">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- row 5 -->
+                <div class="plan-item plan-item-1 row-5">
+                  <p class="tooltip dashed_underline text-basic">
+                    Escucha lo que quieras con tus amigos, en tiempo real
+                  </p>
+                  <div class="tooltip_content right">
+                    Invita a quien quieras, esté donde esté. Controlad en grupo
+                    lo que va a sonar. Podréis disfrutar entre amigos y
+                    controlar lo que se reproduce en el altavoz
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-5">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-5">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- row 6 -->
+                <div class="plan-item plan-item-1 row-6">
+                  <p class="tooltip dashed_underline text-basic">
+                    Organiza la cola de reproducción
+                  </p>
+                  <div class="tooltip_content right">
+                    Añade, elimina o reordena lo que vaya a sonar a
+                    continuación.
+                  </div>
+                </div>
+                <div class="plan-item plan-item-2 row-6">
+                  <div class="no-content-line"></div>
+                </div>
+                <div class="plan-item plan-item-3 row-6">
+                  <div class="tick-icon"></div>
+                </div>
+                <!-- end body -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="choose-a-plan">
+        <div class="container">
+          <h2 class="text-center">
+            Planes asequibles para cualquier situación
+          </h2>
+          <p class="text-center subtitle">
+            Elige un plan Premium y escucha música sin anuncios y sin límites en
+            teléfonos, altavoces y otros dispositivos. Paga de varias formas.
+            Cancela cuando quieras.
+          </p>
+          <div class="payment-methods-grid">
+            <div class="payment-method">
+              <img src="assets/images/visa.svg" alt="Visa" />
+            </div>
+            <div class="payment-method">
+              <img src="assets/images/mastercard.svg" alt="Mastercard" />
+            </div>
+            <div class="payment-method">
+              <img src="assets/images/amex.svg" alt="American Express" />
+            </div>
+            <div class="payment-method">
+              <img src="assets/images/paypal.svg" alt="Paypal" />
+            </div>
+          </div>
+          <div class="premium-plans-includes">
+            <h3 class="text-center">
+              Todos los planes Premium incluyen lo siguiente:
+            </h3>
+            <ul class="includes-list">
+              <li>Escucha tu música favorita sin anuncios</li>
+              <li>Descarga de canciones para disfrutarlas sin conexión</li>
+              <li>Escucha canciones en cualquier orden</li>
+              <li>Calidad del audio alta</li>
+              <li>Escucha lo que quieras con tus amigos, en tiempo real</li>
+              <li>Organiza la cola de reproducción</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plan-cards-list">
+          <div class="container">
+            <div class="cards-container">
+              <!-- card 1 -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="top-promo primary">
+                    <p class="m-0">0€ durante 2 meses</p>
+                  </div>
+                  <div class="premium">
+                    <!-- añado el svg cómo imágen, para tener el código mas limpio  -->
+                    <img
+                      src="assets/icons/spotify-icon.svg"
+                      alt="Spotify Icon"
+                    />
+                    <p>Premium</p>
+                  </div>
+                  <h3 class="text-primary mb-1 mt-0">Individual</h3>
+                  <p class="text-bold m-0">0 € durante 2 meses</p>
+                  <small class="text-gray">Después, 10,99 €/mes</small>
+                </div>
+                <div class="card-body">
+                  <ul class="list">
+                    <li>1 cuenta Premium</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul>
+                  <button class="button primary w-100" style="margin-top: 60px">
+                    Prueba 2 meses por 0€
+                  </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-gray text-mini text-center">
+                    0 € por 2 meses. Luego, 10,99 € al mes. Oferta disponible
+                    solo si no has probado Premium.
+                    <a>Consulta las condiciones</a>. La oferta termina el 19 de
+                    julio de 2025.
+                  </small>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="top-promo purple">
+                    <p class="m-0">0 € durante 1 mes</p>
+                  </div>
+                  <div class="premium">
+                    <!-- añado el svg cómo imágen, para tener el código mas limpio  -->
+                    <img
+                      src="assets/icons/spotify-icon.svg"
+                      alt="Spotify Icon"
+                    />
+                    <p>Premium</p>
+                  </div>
+                  <h3 class="text-purple mb-1 mt-0">Estudiantes</h3>
+                  <p class="text-bold m-0">0 € durante 1 meses</p>
+                  <small class="text-gray">Después, 5,99 €/mes</small>
+                </div>
+                <div class="card-body">
+                  <!-- <ul class="list">
+                    <li>1 cuenta Premium</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul> -->
+                  <ul class="list">
+                    <li>1 cuenta Premium verificada</li>
+                    <li>Descuento para estudiantes que</li>
+                    <li>cumplan los requisitos</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul>
+                  <button class="button purple w-100">
+                    Prueba 2 meses por 0€
+                  </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-gray text-mini text-center">
+                    0 € por 1 mes. Luego, 5,99 € al mes. Oferta disponible solo
+                    para estudiantes matriculados en un centro de educación
+                    superior acreditado y que no hayan probado Premium.
+                    <a>Consulta las condiciones</a>.
+                  </small>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="card">
+                <div class="card-header pt-0">
+                  <div class="premium">
+                    <!-- añado el svg cómo imágen, para tener el código mas limpio  -->
+                    <img
+                      src="assets/icons/spotify-icon.svg"
+                      alt="Spotify Icon"
+                    />
+                    <p>Premium</p>
+                  </div>
+                  <h3 class="text-yellow mb-1 mt-0">Duo</h3>
+                  <p class="text-bold m-0">14,99 € al mes</p>
+                </div>
+                <div class="card-body">
+                  <!-- <ul class="list">
+                    <li>1 cuenta Premium</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul> -->
+                  <ul class="list">
+                    <li>2 cuentas Premium</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul>
+                  <button class="button yellow w-100" style="margin-top: 97px">
+                    Prueba 2 meses por 0€
+                  </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-gray text-mini text-center">
+                    Para parejas que convivan.<a href="">
+                      Consulta las condiciones </a
+                    >.
+                  </small>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="card mt-3">
+                <div class="card-header pt-0">
+                  <div class="premium">
+                    <!-- añado el svg cómo imágen, para tener el código mas limpio  -->
+                    <img
+                      src="assets/icons/spotify-icon.svg"
+                      alt="Spotify Icon"
+                    />
+                    <p>Premium</p>
+                  </div>
+                  <h3 class="text-blue mb-1 mt-0">Familiar</h3>
+                  <p class="text-bold m-0">17,99 € al mes</p>
+                </div>
+                <div class="card-body">
+                  <!-- <ul class="list">
+                    <li>1 cuenta Premium</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul> -->
+                  <ul class="list">
+                    <li>Hasta 6 cuentas Premium</li>
+                    <li>Controla el contenido etiquetado como explícito</li>
+                    <li>Cancela cuando quieras</li>
+                  </ul>
+                  <button class="button blue w-100">
+                    Prueba 2 meses por 0€
+                  </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-gray text-mini text-center">
+                    Para hasta 6 miembros de una familia que convivan.
+                    <a href=""> Consulta las condiciones </a> .
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 3 -->
+      <section id="faq">
+        <div class="container">
+          <h2 class="text-center title">¿Tienes alguna pregunta?</h2>
+          <br />
+          <p class="text-center subtitle">Tenemos las respuestas.</p>
+          <p class="text-center subtitle mt-3">
+            Encontrarás más respuestas en nuestro
+            <a href="">sitio de asistencia.</a>
+          </p>
+          <div class="accordion">
+            <ul>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cómo funciona la prueba de Spotify Premium?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Si no has utilizado nunca Premium, es posible que puedas
+                      probarlo gratis (o a un precio reducido).
+                    </p>
+                    <p>
+                      Aunque sea una prueba, tendrás que indicar una forma de
+                      pago válida para registrarte. Usaremos esa información
+                      para confirmar tu país o región y cobrarte si quieres
+                      quedarte con Premium cuando termine la oferta.
+                    </p>
+
+                    Te enviaremos un recordatorio 7 días antes de que finalice
+                    la prueba. Se aplican términos y restricciones por país.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cómo cancelo mi plan Premium?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Puedes cancelar fácilmente el plan Premium cuando quieras,
+                      siempre que tengas conexión a Internet, en la página de tu
+                      cuenta.
+                    </p>
+                    <p>
+                      Si tienes una suscripción de pago, seguirás con Premium
+                      hasta la fecha de facturación siguiente y, en ese momento,
+                      tu cuenta pasará al plan gratuito.
+                    </p>
+
+                    Si cancelas la suscripción durante un periodo de prueba
+                    gratuito, perderás el acceso a las ventajas de Premium
+                    inmediatamente y la cuenta pasará al servicio gratuito. Las
+                    pruebas gratuitas no se pueden reactivar.
+                    <p>
+                      No perderás las listas ni la música guardada, que podrás
+                      escuchar con anuncios en nuestro servicio gratuito.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cómo funciona el plan Premium Duo?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Premium Duo es un plan para parejas que vivan juntas. Es
+                      más barato que tener dos cuentas de Premium Individual. Te
+                      pediremos la dirección para confirmar que ambos miembros
+                      vivís allí. Podrás invitar a una persona al plan
+                      inmediatamente después de la compra. Cada miembro tendrá
+                      una cuenta Premium independiente, así que podréis escuchar
+                      contenido a la vez. Cada uno tendrá sus propias listas y
+                      música guardada. El otro miembro de la cuenta no podrá ver
+                      lo que estás escuchando.
+                    </p>
+                    <p>
+                      <a href="">Obtén más información</a> sobre Premium Duo.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cómo funciona el plan Premium Familiar?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Premium Familiar es un plan para hasta 6 familiares que
+                      vivan en el mismo domicilio. Es más barato que tener una
+                      cuenta de Premium Individual por persona. Te pediremos la
+                      dirección para confirmar que todos vivís allí. Podrás
+                      invitar a miembros al plan inmediatamente después de la
+                      compra. Cada uno tendrá una cuenta Premium independiente,
+                      así que podréis escuchar contenido a la vez. También
+                      tendréis vuestras propias listas y música guardada. Los
+                      demás miembros de la cuenta no podrán ver lo que estás
+                      escuchando.
+                    </p>
+                    <p>
+                      <a href="">Obtén más información</a> sobre Premium
+                      Familiar.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cómo funciona el plan Premium para Estudiantes?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Si te has matriculado en una universidad o centro similar
+                      acreditado y eres mayor de 18 años, sí. Puedes disfrutar
+                      de Premium para Estudiantes durante un máximo de 4 años.
+                    </p>
+                    <p>
+                      <a href="">Obtén más información</a> sobre Premium
+                      Estudiantes.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">
+                    ¿Cuánto cuesta Spotify Premium en España?
+                  </h3>
+                  <div class="accordion-content">
+                    <p class="mt-0">
+                      Los precios de Spotify Premium en España son diferentes
+                      según el plan Premium que elijas: el plan Spotify Premium
+                      Individual cuesta 10,99 € al mes; Premium Duo, 14,99 € al
+                      mes; Premium Familiar, 17,99 € al mes; y Premium para
+                      Estudiantes, 5,99 € al mes. Si no has utilizado nunca un
+                      plan Premium, es posible que puedas probarlo gratis (o a
+                      un precio reducido). Se aplican términos y restricciones
+                      por país.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <img src="assets/icons/logo.svg" height="30" alt="" />
+          </div>
+          <div class="footer-column">
+            <p class="footer-column-title text-gray">EMPRESA</p>
+            <a class="footer-link"> Acerca de</a>
+            <a class="footer-link">Empleo</a>
+            <a class="footer-link">For the Record</a>
+          </div>
+          <div class="footer-column">
+            <p class="footer-column-title text-gray">COMUNIDADES</p>
+            <a class="footer-link"> Para artistas</a>
+            <a class="footer-link"> Desarrolladores</a>
+            <a class="footer-link"> Publicidad</a>
+            <a class="footer-link"> Inversores</a>
+            <a class="footer-link"> Proveedores</a>
+          </div>
+          <div class="footer-column">
+            <p class="footer-column-title text-gray">ENLACES ÚTILES</p>
+            <a class="footer-link"> Asistencia</a>
+            <a class="footer-link">Reproductor web</a>
+            <a class="footer-link">App gratis para móvil</a>
+          </div>
+          <div class="footer-column">
+            <p class="footer-column-title text-gray">PLANES DE SPOTIFY</p>
+            <a class="footer-link">Premium Individual</a>
+            <a class="footer-link">Premium Duo</a>
+            <a class="footer-link">Premium Familiar</a>
+            <a class="footer-link">Premium para Estudiantes</a>
+            <a class="footer-link">Spotify Free</a>
+          </div>
+
+          <div class="footer-column">
+            <div class="social-media-grid">
+              <div class="social-item">
+                <img src="assets/icons/instagram.svg" alt="Instagram Icon" />
+              </div>
+              <div class="social-item">
+                <div class="social-item">
+                  <img src="assets/icons/x.svg" alt="X Icon" />
+                </div>
+              </div>
+              <div class="social-item">
+                <div class="social-item">
+                  <img src="assets/icons/facebook.svg" alt="Facebook Icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="text-gray text-mini mr-3">Legal</span>
+          <span class="text-gray text-mini mr-3"
+            >Centro de seguridad y privacidad</span
+          >
+          <span class="text-gray text-mini mr-3">Política de Privacidad</span>
+          <span class="text-gray text-mini mr-3"
+            >Configuración de cookies
+          </span>
+          <span class="text-gray text-mini mr-3"
+            >Información sobre los anuncios
+          </span>
+          <span class="text-gray text-mini mr-3">Accesibilidad</span>
+          <div class="copyright">
+            <p class="text-gray text-mini mb-3">
+              <img src="assets/icons/world.svg" class="mr-2" alt="world" />
+              España (Español)
+            </p>
+            <p class="text-gray text-mini">© 2025 Spotify AB</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
